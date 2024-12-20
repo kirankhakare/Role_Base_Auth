@@ -1,0 +1,19 @@
+<div class="container mt-4">
+  <h2 class="text-center">{{ roleCode }} Role</h2>
+  <p class="text-center">Total Users: {{ userCount }}</p>
+
+  <!-- Buttons to switch between roles with Bootstrap classes -->
+  <div class="text-center mb-3">
+    <button class="btn btn-primary me-2" (click)="switchRole('User')">User</button>
+    <button class="btn btn-warning me-2" (click)="switchRole('Sub-admin')">Sub-admin</button>
+    <button class="btn btn-warning me-2" (click)="switchRole('admin')">Admin</button>
+  </div>
+
+  <!-- Displaying users based on the selected role -->
+  <ul class="list-group">
+    <li *ngFor="let user of users" class="list-group-item d-flex justify-content-between align-items-center">
+      <strong>{{ user.name }}</strong> 
+      <span class="badge bg-secondary">{{ user.role }}</span>
+    </li>
+  </ul>
+</div>

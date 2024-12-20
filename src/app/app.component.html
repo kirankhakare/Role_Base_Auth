@@ -1,0 +1,15 @@
+<mat-toolbar color="primary" *ngIf="isMenuRequire">
+  <button class="btn btn-outline-light" routerLink="/">Home</button>
+  <a *ngIf="isAdmin" class="btn btn-outline-light" routerLink="/user_role">User_Filer_Data</a> &nbsp;
+  <a *ngIf="isAdmin" class="btn btn-outline-light"  routerLink="/user">Users_Data</a> &nbsp;
+  <a *ngIf="isSubadmin" class="btn btn-outline-light"  routerLink="/sub-admin-dashboard">Sub-Admin</a>&nbsp;
+  <a *ngIf="isSubadmin" class="btn btn-outline-light" type="submit" routerLink="/register">Register_User</a> &nbsp;
+  <a *ngIf="isAdmin" class="btn btn-outline-light" type="submit" routerLink="/register">Register_User</a> &nbsp;
+     <a class="btn btn-outline-light" type="submit" routerLink="/login">Logout</a>
+  <span class="spacer"></span>
+ 
+</mat-toolbar>
+
+<div class="content" style="width: 100%; display: block;" role="main">
+  <router-outlet></router-outlet>
+</div>

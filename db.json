@@ -1,0 +1,97 @@
+{
+  "user": [
+    {
+      "id": "Kiran",
+      "name": "Kiran_Khakare",
+      "password": "Kiran@123",
+      "email": "kiran111@gmail.com",
+      "gender": "male",
+      "role": "admin",
+      "isActive": true
+    },
+    {
+      "id": "Shra14",
+      "name": "Shraddha",
+      "password": "Shraddha@123",
+      "email": "shraddha14@gmail.com",
+      "gender": "female",
+      "role": "User",
+      "isActive": true
+    },
+    {
+      "id": "Shivani",
+      "name": "Shivani",
+      "password": "Shivani@123",
+      "email": "shivani123@gmail.com",
+      "gender": "female",
+      "role": "User",
+      "isActive": true
+    },
+    {
+      "id": "Kajal",
+      "name": "Kajal12",
+      "password": "Kajal@123",
+      "email": "kajal123@gmail.com",
+      "gender": "female",
+      "role": "User",
+      "isActive": true
+    },
+    {
+      "id": "Aarti",
+      "name": "Aarti",
+      "password": "Aarti@123",
+      "email": "aarti123@gmail.com",
+      "gender": "female",
+      "role": "Sub-admin",
+      "isActive": true
+    },
+    {
+      "id": "Aasha",
+      "name": "Aasha",
+      "password": "Aasha@123",
+      "email": "aasha123@gmail.com",
+      "gender": "female",
+      "role": "User",
+      "isActive": false
+    },
+    {
+      "id": "Namdev",
+      "name": "Namdev",
+      "password": "Namdev@123",
+      "email": "namdev123@gmail.com",
+      "gender": "male",
+      "role": "User",
+      "isActive": false
+    },
+    {
+      "id": "Manish",
+      "name": "Manish",
+      "password": "Manish@123",
+      "email": "manish111@gmai.com",
+      "gender": "male",
+      "role": "User",
+      "isActive": true
+    },
+    {
+      "id": "Ganesh",
+      "name": "Ganesh",
+      "password": "Ganesh@123",
+      "email": "ganesh11@gmail.com",
+      "gender": "male",
+      "role": "",
+      "isActive": false
+    }
+  ],
+  "role": [
+    {
+      "code": "Sub-admin",
+      "name": "Sub-admin",
+      "id": "f230"
+    },
+    {
+      "code": "User",
+      "name": "User",
+      "id": "4d53"
+    }
+  ]
+}

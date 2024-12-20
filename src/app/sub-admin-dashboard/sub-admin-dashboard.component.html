@@ -1,0 +1,57 @@
+<div class="container mt-5">
+  <h1>Welcome, Sub-Admin</h1>
+  <p>Below is the list of all users:</p>
+
+  <!-- Display users or message if no users -->
+  <div *ngIf="users.length > 0; else noUsers">
+    <ul class="list-group">
+      <li *ngFor="let user of users; let i = index" class="list-group-item d-flex justify-content-between align-items-center">
+        {{ user.name }} - Role: {{ user.role }}
+        <div>
+          <!-- Edit and Delete Buttons with conditions to prevent actions for admin/sub-admin -->
+          <button *ngIf="user.role !== 'admin' && user.role !== 'Sub-admin'" (click)="editUser(i)" class="btn btn-warning btn-sm mr-2">Edit</button>
+          <button *ngIf="user.role !== 'admin' && user.role !== 'Sub-admin'" (click)="deleteUser(user.id, user.role)" class="btn btn-danger btn-sm">Delete</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Template for No Users Found -->
+  <ng-template #noUsers>
+    <p>No users found.</p>
+  </ng-template>
+
+  <!-- Edit User Modal -->
+  <div *ngIf="showModal" class="modal fade show" tabindex="-1" role="dialog" style="display: block;" aria-modal="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit User</h5>
+          <button type="button" class="close" (click)="closeModal()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" [(ngModel)]="editUserData.name" name="name" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" [(ngModel)]="editUserData.email" name="email" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="role">Role</label>
+              <input type="text" id="role" [(ngModel)]="editUserData.role" name="role" class="form-control">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+          <button type="button" class="btn btn-primary" (click)="updateUser()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
