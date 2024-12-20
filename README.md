@@ -7,11 +7,13 @@ Role-Based Authentication System 🌐🔐 This application is designed to manage
 * Create Accounts: Admin can create login IDs for Sub-admins and Users.
 * Delete Accounts: Admin can delete the accounts of Sub-admins and Users.
 * Access All Data: View and manage all user and sub-admin data.
+  
 ✅ 2. Sub-admin 👨‍💼:
 * Create User Accounts: Sub-admin can create login IDs for Users.
 * View User Data: Sub-admin can view Users they have created and their data.
 * Delete User Accounts: Sub-admin can delete the user accounts they created.
 * Limited Access: Cannot manage other sub-admins or admin accounts.
+  
 ✅ 3. User 👤:
 * View Personal Info: Users can view specific details like their account created by info.
 * Home Page Access: Access to the home page with basic information.
